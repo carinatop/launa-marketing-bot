@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  functions = "netlify/functions"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[env]
+  [env.production]
+    environment = { VITE_CLAUDE_API_KEY = "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" }
